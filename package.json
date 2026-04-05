@@ -1,13 +1,45 @@
 {
-  "name": "music-bot",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "beatdock",
+  "version": "2.7.4",
+  "description": "A modern and efficient Discord music bot with slash commands, multi-language support, and Docker deployment.",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js",
+    "docker:build": "docker build -t beatdock:latest .",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f"
+  },
+  "keywords": [
+    "discord",
+    "discord-bot",
+    "music",
+    "music-bot",
+    "bot",
+    "lavalink",
+    "youtube",
+    "spotify",
+    "docker",
+    "nodejs"
+  ],
+  "author": "Lázaro <lazaro98@duck.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazaroagomez/BeatDock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lazaroagomez/BeatDock/issues"
+  },
+  "homepage": "https://github.com/lazaroagomez/BeatDock#readme",
+  "engines": {
+    "node": ">=22.16.0",
+    "npm": ">=11.4.2"
   },
   "dependencies": {
-    "discord.js": "^14.14.1",
-    "dotenv": "^16.3.1",
-    "lavalink-client": "^2.5.0"
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.3.1",
+    "lavalink-client": "^2.9.7",
+    "picocolors": "^1.1.1"
   }
 }
